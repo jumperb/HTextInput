@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DDEDCB9F-F715-448C-92AE-D56668684999</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HTextInput</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BC2BCAC355E98280F333DDE45F97D8A30DFD8C32</key>
+		<string>192.168.1.33:HTextInput</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HTextInput/HTextInput.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BC2BCAC355E98280F333DDE45F97D8A30DFD8C32</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>192.168.1.33:HTextInput</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BC2BCAC355E98280F333DDE45F97D8A30DFD8C32</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BC2BCAC355E98280F333DDE45F97D8A30DFD8C32</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HTextInput</string>
+		</dict>
+	</array>
+</dict>
+</plist>
