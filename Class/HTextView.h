@@ -21,6 +21,6 @@
 @property (nonatomic, weak) UIView *motherBoard;
 
 @property (nonatomic, strong) HTAAdjustDistanceBlock adjustDistanceCallback;
-
+@property (nonatomic) BOOL enableReturn;
 @property (nonatomic, strong) callback returnPressed;
 @end

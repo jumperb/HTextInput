@@ -16,15 +16,15 @@
 
 @interface HTextViewDelegateObj : NSObject <UITextViewDelegate>
 
-@property (nonatomic, assign) CGFloat maxLength;
-@property (nonatomic, assign) CGFloat lineSpacing;
+@property (nonatomic) CGFloat maxLength;
+@property (nonatomic) CGFloat lineSpacing;
 @property (nonatomic, weak) id<UITextViewDelegate> outerDelegate;
-
+@property (nonatomic) BOOL enableReturn;
 @end
 
 @interface HTextView () <UIGestureRecognizerDelegate>
-@property (nonatomic, strong) UILabel *holderLabel;
-@property (nonatomic, strong) HTextViewDelegateObj *delegateObj;
+@property (nonatomic) UILabel *holderLabel;
+@property (nonatomic) HTextViewDelegateObj *delegateObj;
 @end
 
 @implementation HTextView
@@ -60,7 +60,8 @@
     self.delegate = self.delegateObj;
     self.placeHolderInsets = UIEdgeInsetsZero;
     [self setEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-
+    self.enableReturn = YES;
+    self.delegateObj.enableReturn = self.enableReturn;
 }
 
 - (void)dealloc
@@ -69,6 +70,11 @@
     {
         [animation removeKeyboardObserver];
     }
+}
+- (void)setEnableReturn:(BOOL)enableReturn
+{
+    _enableReturn = enableReturn;
+    self.delegateObj.enableReturn = YES;
 }
 - (void)setPlaceholder:(NSString *)placeholder
 {
@@ -253,7 +259,7 @@
         if ([text isEqualToString:@"\n"])
         {
             if (((HTextView *)textView).returnPressed) ((HTextView *)textView).returnPressed(textView, textView.text);
-            return NO;
+            return self.enableReturn;
         }
     }
 
