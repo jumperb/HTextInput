@@ -92,10 +92,10 @@
             }
             self.holderLabel = [[UILabel alloc] initWithFrame:frame];
             _holderLabel.textColor = [UIColor lightGrayColor];
-            _holderLabel.text = _placeholder;
             _holderLabel.font = self.font;
             [self addSubview:_holderLabel];
         }
+        _holderLabel.text = _placeholder;
     }
     else
     {
@@ -113,7 +113,11 @@
                                         font.lineHeight);
     }
 }
-
+- (void)setText:(NSString *)text
+{
+    [super setText:text];
+    [self.delegate textViewDidChange:self];
+}
 - (void)setMaxLength:(CGFloat)maxLength
 {
     _maxLength = maxLength;
