@@ -100,6 +100,7 @@
     else
     {
         [_holderLabel removeFromSuperview];
+        _holderLabel = nil;
     }
 }
 - (void)setFont:(UIFont *)font
