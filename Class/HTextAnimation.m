@@ -171,7 +171,6 @@
 }
 - (void)keyboardDidHidden:(NSNotification *)noti
 {
-    if (![_inputView isFirstResponder]) return;
     self.isAnimating = NO;
     self.recorded = NO;
     self.orignalAnimationViewProperty = nil;
