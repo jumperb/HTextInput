@@ -12,7 +12,7 @@
 #import "HTextAnimationContentOffset.h"
 #import "HTextAnimationPosition.h"
 #import "HTextAnimationFrame.h"
-#import <UIView+ext.h>
+#import "UIView+ext.h"
 
 @interface HTextViewDelegateObj : NSObject <UITextViewDelegate>
 

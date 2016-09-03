@@ -9,7 +9,7 @@
 #import "TextFieldTest2.h"
 #import "HTextField.h"
 #import "HTextView.h"
-#import <HCommon.h>
+#import "HCommon.h"
 
 @implementation TextFieldTest2
 - (void)loadView

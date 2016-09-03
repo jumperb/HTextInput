@@ -9,7 +9,7 @@
 #import "HTextInputMotherBoard.h"
 #import "HTextField.h"
 #import "HTextView.h"
-#import <HCommon.h>
+#import "HCommon.h"
 
 @interface HTextInputMotherBoard ()
 @property (nonatomic) UITextField *triger;

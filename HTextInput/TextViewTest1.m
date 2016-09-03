@@ -8,7 +8,7 @@
 
 #import "TextViewTest1.h"
 #import "HTextView.h"
-#import <HCommon.h>
+#import "HCommon.h"
 
 @interface TextViewTest1 ()
 @property (nonatomic) UITextView *textView;

@@ -7,7 +7,7 @@
 //
 
 #import "HTextAnimationBottom.h"
-#import <UIView+ext.h>
+#import "UIView+ext.h"
 
 @implementation HTextAnimationBottom
 

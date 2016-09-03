@@ -7,7 +7,7 @@
 //
 
 #import "HTextAnimationContentInsect.h"
-#import <UIView+ext.h>
+#import "UIView+ext.h"
 
 @implementation HTextAnimationContentInsect
 
