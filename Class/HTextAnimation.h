@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HTextInputProtocals.h"
-#import "HCommonBlock.h"
+#import <Hodor/HCommonBlock.h>
 
 typedef float (^HTAAdjustDistanceBlock)(float distance);
 

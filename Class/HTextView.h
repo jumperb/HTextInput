@@ -13,6 +13,7 @@
 @property (nonatomic) CGFloat maxLength;
 @property (nonatomic) UIEdgeInsets edgeInsets;
 @property (nonatomic) NSString *placeholder;
+@property (nonatomic) UIColor *placeholderColor;
 @property (nonatomic) UIEdgeInsets placeHolderInsets;
 //if you did not set animations, there is a default animation according to view type
 @property (nonatomic) NSArray *animations;

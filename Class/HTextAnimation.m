@@ -7,7 +7,7 @@
 //
 
 #import "HTextAnimation.h"
-#import "UIView+ext.h"
+#import <Hodor/UIView+ext.h>
 
 @interface HTextAnimation ()
 @property (nonatomic) BOOL didAddObserver;

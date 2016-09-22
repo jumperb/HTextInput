@@ -7,7 +7,7 @@
 //
 
 #import "HTextAnimationPosition.h"
-#import "UIView+ext.h"
+#import <Hodor/UIView+ext.h>
 
 @implementation HTextAnimationPosition
 - (void)recordAnimationStates

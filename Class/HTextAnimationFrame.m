@@ -7,7 +7,7 @@
 //
 
 #import "HTextAnimationFrame.h"
-#import "UIView+ext.h"
+#import <Hodor/UIView+ext.h>
 
 @implementation HTextAnimationFrame
 - (void)recordAnimationStates

@@ -12,7 +12,7 @@
 #import "HTextAnimationContentOffset.h"
 #import "HTextAnimationPosition.h"
 #import "HTextAnimationFrame.h"
-#import "UIView+ext.h"
+#import <Hodor/UIView+ext.h>
 
 @interface HTextViewDelegateObj : NSObject <UITextViewDelegate>
 
@@ -59,6 +59,7 @@
     self.delegateObj = [HTextViewDelegateObj new];
     self.delegate = self.delegateObj;
     self.placeHolderInsets = UIEdgeInsetsZero;
+    self.placeholderColor = [UIColor lightGrayColor];
     [self setEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     self.enableReturn = YES;
     self.delegateObj.enableReturn = self.enableReturn;
@@ -91,7 +92,7 @@
                 frame = CGRectMake(_placeHolderInsets.left, _placeHolderInsets.top, self.width - _placeHolderInsets.left - _placeHolderInsets.right, self.font.lineHeight);
             }
             self.holderLabel = [[UILabel alloc] initWithFrame:frame];
-            _holderLabel.textColor = [UIColor lightGrayColor];
+            _holderLabel.textColor = self.placeholderColor;
             _holderLabel.font = self.font;
             [self addSubview:_holderLabel];
         }
