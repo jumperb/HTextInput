@@ -75,7 +75,7 @@
 - (void)setEnableReturn:(BOOL)enableReturn
 {
     _enableReturn = enableReturn;
-    self.delegateObj.enableReturn = YES;
+    self.delegateObj.enableReturn = enableReturn;
 }
 - (void)setPlaceholder:(NSString *)placeholder
 {
