@@ -269,7 +269,6 @@
         }
     }
 
-
     if (self.outerDelegate && [self.outerDelegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)])
     {
         BOOL outerResult = [self.outerDelegate textView:textView shouldChangeTextInRange:range replacementText:text];
@@ -279,6 +278,13 @@
     NSInteger existedLength = textView.text.length;
     NSInteger selectedLength = range.length;
     NSInteger replaceLength = text.length;
+
+
+    if ([text isEqualToString:@""])
+    {
+        return YES;
+    }
+
     if (existedLength - selectedLength + replaceLength > _maxLength) {
         return NO;
     }

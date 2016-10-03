@@ -26,6 +26,7 @@
 		009AE7F71B2689F100EC9F0B /* TextFieldTest2.m in Sources */ = {isa = PBXBuildFile; fileRef = 009AE7F61B2689F100EC9F0B /* TextFieldTest2.m */; };
 		009AE7FD1B26EA3700EC9F0B /* TextViewTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = 009AE7FC1B26EA3700EC9F0B /* TextViewTest1.m */; };
 		00BEE9091B5CC70300195AE7 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00BEE9081B5CC70300195AE7 /* bg.jpg */; };
+		3A8BD5775EE00C3E5A91DC35 /* libPods-HTextInput.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C8FEBB069ED1E61DEAA610 /* libPods-HTextInput.a */; };
 		D0823C2C25249174A98274D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B68D674755377A663DAFF9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +71,10 @@
 		009AE7FC1B26EA3700EC9F0B /* TextViewTest1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTest1.m; sourceTree = "<group>"; };
 		00BEE9081B5CC70300195AE7 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		07B68D674755377A663DAFF9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0275DDE6F0B60420C77FE1 /* Pods-HTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTextInput.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput.debug.xcconfig"; sourceTree = "<group>"; };
 		4B61DEBE5D8DA5D3B74B9EA9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C8FEBB069ED1E61DEAA610 /* libPods-HTextInput.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTextInput.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDF43BAE019F8E315E6FAB7 /* Pods-HTextInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTextInput.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput.release.xcconfig"; sourceTree = "<group>"; };
 		E4ACD4C0C9FA78784520D6F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0823C2C25249174A98274D9 /* libPods.a in Frameworks */,
+				3A8BD5775EE00C3E5A91DC35 /* libPods-HTextInput.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				07B68D674755377A663DAFF9 /* libPods.a */,
+				A8C8FEBB069ED1E61DEAA610 /* libPods-HTextInput.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			children = (
 				4B61DEBE5D8DA5D3B74B9EA9 /* Pods.debug.xcconfig */,
 				E4ACD4C0C9FA78784520D6F3 /* Pods.release.xcconfig */,
+				1D0275DDE6F0B60420C77FE1 /* Pods-HTextInput.debug.xcconfig */,
+				CDDF43BAE019F8E315E6FAB7 /* Pods-HTextInput.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -205,11 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 007A529B1B2541FA004C5E36 /* Build configuration list for PBXNativeTarget "HTextInput" */;
 			buildPhases = (
-				6B5A617BE57F2DBFADF95D0C /* Check Pods Manifest.lock */,
+				6B5A617BE57F2DBFADF95D0C /* [CP] Check Pods Manifest.lock */,
 				007A52741B2541FA004C5E36 /* Sources */,
 				007A52751B2541FA004C5E36 /* Frameworks */,
 				007A52761B2541FA004C5E36 /* Resources */,
-				354DFB944B400AE208F3A1BD /* Copy Pods Resources */,
+				354DFB944B400AE208F3A1BD /* [CP] Copy Pods Resources */,
+				FA9A9945F7266988B8B0CA6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,34 +274,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		354DFB944B400AE208F3A1BD /* Copy Pods Resources */ = {
+		354DFB944B400AE208F3A1BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6B5A617BE57F2DBFADF95D0C /* Check Pods Manifest.lock */ = {
+		6B5A617BE57F2DBFADF95D0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9A9945F7266988B8B0CA6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -409,7 +433,7 @@
 		};
 		007A529C1B2541FA004C5E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B61DEBE5D8DA5D3B74B9EA9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1D0275DDE6F0B60420C77FE1 /* Pods-HTextInput.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -425,7 +449,7 @@
 		};
 		007A529D1B2541FA004C5E36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4ACD4C0C9FA78784520D6F3 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CDDF43BAE019F8E315E6FAB7 /* Pods-HTextInput.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -1,4 +1,9 @@
-platform :ios, :deployment_target => "6.0"
 source 'https://github.com/CocoaPods/Specs.git'
-pod "Hodor"
-pod "HTestVC"
+
+
+platform :ios, :deployment_target => "7.0"
+
+target "HTextInput" do
+	pod "Hodor"
+	pod "HTestVC"
+end
