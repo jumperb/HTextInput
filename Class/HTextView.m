@@ -85,11 +85,11 @@
         if (!_holderLabel)
         {
             CGRect frame = CGRectMake(self.textContainerInset.left + 5, self.textContainerInset.top,
-                                      self.width - self.textContainerInset.left - self.textContainerInset.right,
+                                      self.h_width - self.textContainerInset.left - self.textContainerInset.right,
                                       self.font.lineHeight);
             if (!UIEdgeInsetsEqualToEdgeInsets(_placeHolderInsets, UIEdgeInsetsZero))
             {
-                frame = CGRectMake(_placeHolderInsets.left, _placeHolderInsets.top, self.width - _placeHolderInsets.left - _placeHolderInsets.right, self.font.lineHeight);
+                frame = CGRectMake(_placeHolderInsets.left, _placeHolderInsets.top, self.h_width - _placeHolderInsets.left - _placeHolderInsets.right, self.font.lineHeight);
             }
             self.holderLabel = [[UILabel alloc] initWithFrame:frame];
             _holderLabel.textColor = self.placeholderColor;
@@ -111,7 +111,7 @@
     if (UIEdgeInsetsEqualToEdgeInsets(_placeHolderInsets, UIEdgeInsetsZero))
     {
         self.holderLabel.frame = CGRectMake(self.textContainerInset.left + 5, self.textContainerInset.top,
-                                        self.width - self.textContainerInset.left - self.textContainerInset.right,
+                                        self.h_width - self.textContainerInset.left - self.textContainerInset.right,
                                         font.lineHeight);
     }
 }
@@ -131,13 +131,13 @@
     self.textContainerInset = edgeInsets;
     if (UIEdgeInsetsEqualToEdgeInsets(_placeHolderInsets, UIEdgeInsetsZero))
     {
-        self.holderLabel.frame = CGRectMake(edgeInsets.left + 5, edgeInsets.top, self.width - _placeHolderInsets.left - _placeHolderInsets.right, self.holderLabel.height);
+        self.holderLabel.frame = CGRectMake(edgeInsets.left + 5, edgeInsets.top, self.h_width - _placeHolderInsets.left - _placeHolderInsets.right, self.holderLabel.h_height);
     }
 }
 - (void)setPlaceHolderInsets:(UIEdgeInsets)placeHolderInsets
 {
     _placeHolderInsets = placeHolderInsets;
-    if (_holderLabel) self.holderLabel.frame = CGRectMake(placeHolderInsets.left, placeHolderInsets.top, self.width - placeHolderInsets.left - placeHolderInsets.right, self.holderLabel.height);
+    if (_holderLabel) self.holderLabel.frame = CGRectMake(placeHolderInsets.left, placeHolderInsets.top, self.h_width - placeHolderInsets.left - placeHolderInsets.right, self.holderLabel.h_height);
 }
 - (void)setDelegate:(id<UITextViewDelegate>)delegate
 {
@@ -181,7 +181,7 @@
 - (NSArray *)defaultAnimations
 {
     UIView *superView = nil;
-    if (self.height > [UIScreen mainScreen].bounds.size.height/2)
+    if (self.h_height > [UIScreen mainScreen].bounds.size.height/2)
     {
         superView = self;
         HTextAnimation *animation1 = [HTextAnimationFrame new];

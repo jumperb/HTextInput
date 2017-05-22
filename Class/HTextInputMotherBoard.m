@@ -42,7 +42,7 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         [self addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchDown];
-        _triger = [[UITextField alloc] initWithFrame:CGRectMake(0, self.height, self.width, 44)];
+        _triger = [[UITextField alloc] initWithFrame:CGRectMake(0, self.h_height, self.h_width, 44)];
         ALWAYS_BW(_triger);
         [self addSubview:_triger];
     }
@@ -70,7 +70,7 @@
 - (void)show
 {
     NSAssert(self.superview, @"need add to window");
-    NSAssert(self.width > 1 && self.height > 1, @"is you size correct?");
+    NSAssert(self.h_width > 1 && self.h_height > 1, @"is you size correct?");
     if (_animations)
     {
         for (HTextAnimation *animation in self.animations)

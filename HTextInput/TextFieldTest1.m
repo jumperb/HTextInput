@@ -23,19 +23,19 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    _scrollView.contentSize = CGSizeMake(self.view.width, self.view.height * 2);
+    _scrollView.contentSize = CGSizeMake(self.view.h_width, self.view.h_height * 2);
     ALWAYS_FULL(_scrollView);
     [self.view addSubview:_scrollView];
     float y = 100;
     for (int i = 0; i < 3; i ++)
     {
-        HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(15, y, self.view.width - 30, 44)];
+        HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(15, y, self.view.h_width - 30, 44)];
         textField.backgroundColor = [UIColor random];
         textField.placeholder = @"HTextField";
         textField.borderStyle = UITextBorderStyleRoundedRect;
         [_scrollView addSubview:textField];
         y += 100;
-        HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(15, y, self.view.width - 30, 44)];
+        HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(15, y, self.view.h_width - 30, 44)];
         textView.backgroundColor = [UIColor random];
         textView.placeholder = @"HTextView";
         [_scrollView addSubview:textView];

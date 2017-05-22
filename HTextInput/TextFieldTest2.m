@@ -24,13 +24,13 @@
     float y = 100;
     for (int i = 0; i < 5; i ++)
     {
-        HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(15, y, self.view.width - 30, 44)];
+        HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(15, y, self.view.h_width - 30, 44)];
         textField.backgroundColor = [UIColor random];
         textField.placeholder = @"HTextField";
         textField.borderStyle = UITextBorderStyleRoundedRect;
         [self.view addSubview:textField];
         y += 100;
-        HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(15, y, self.view.width - 30, 44)];
+        HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(15, y, self.view.h_width - 30, 44)];
         textView.backgroundColor = [UIColor random];
         textView.placeholder = @"HTextView";
         [self.view addSubview:textView];

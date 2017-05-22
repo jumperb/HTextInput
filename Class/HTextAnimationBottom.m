@@ -36,7 +36,7 @@
     UIScrollView *scrollView = (UIScrollView *)self.animationView;
 
     UIEdgeInsets newEdge = [(NSValue *)self.orignalAnimationViewProperty UIEdgeInsetsValue];
-    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - scrollView.ymax);
+    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - scrollView.h_ymax);
     [(UIScrollView *)self.animationView setContentInset:newEdge];
     [self scrollToBottom:scrollView edge:newEdge];
 }

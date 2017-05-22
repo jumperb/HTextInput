@@ -35,7 +35,7 @@
     if (![self.animationView isKindOfClass:[UIScrollView class]]) return;
 
     UIEdgeInsets newEdge = [(NSValue *)self.orignalAnimationViewProperty UIEdgeInsetsValue];
-    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - ((UIScrollView *)self.animationView).ymax);
+    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - ((UIScrollView *)self.animationView).h_ymax);
     [(UIScrollView *)self.animationView setContentInset:newEdge];
 }
 - (void)recoverAnimationStates

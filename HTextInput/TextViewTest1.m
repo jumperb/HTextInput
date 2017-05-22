@@ -33,7 +33,7 @@
     [self.view addSubview:bg];
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStylePlain target:self action:@selector(hideKeyboard)];
     self.navigationItem.rightBarButtonItem = rightBtn;
-    HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height - 64)];
+    HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(0, 64, self.view.h_width, self.view.h_height - 64)];
     ALWAYS_FULL(textView);
     _textView = textView;
     _textView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;

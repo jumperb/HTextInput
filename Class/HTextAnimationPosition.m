@@ -13,7 +13,7 @@
 - (void)recordAnimationStates
 {
     self.orignalAnimationViewProperty = [NSValue valueWithCGRect:self.animationView.frame];
-    self.orignalAnimationViewProperty2 = @(self.animationView.ymax);
+    self.orignalAnimationViewProperty2 = @(self.animationView.h_ymax);
 }
 - (void)setAnimationEndStatesWithDistance:(CGFloat)distance
 {

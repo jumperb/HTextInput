@@ -32,9 +32,9 @@
         self.title = @"MENU";
         __weak typeof(self) weakSelf = self;
         [self addMenu:@"MotherBoard" subTitle:@"auto creaded input view" callback:^(id sender, NSIndexPath *indexPath) {
-            UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, weakSelf.view.width, 100)];
+            UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, weakSelf.view.h_width, 100)];
             bg.backgroundColor = [UIColor random];
-            HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(10, 10, self.view.width - 20, 100 - 20)];
+            HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(10, 10, self.view.h_width - 20, 100 - 20)];
             textView.layer.cornerRadius = 6;
             textView.clipsToBounds = YES;
             [bg addSubview:textView];
@@ -155,10 +155,10 @@
 }
 - (UIView *)bottomInputBar
 {
-    UIToolbar *back = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.height - 50, self.view.width, 50)];
+    UIToolbar *back = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.h_height - 50, self.view.h_width, 50)];
     back.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-    HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(10, (back.height - 30)/2, back.width - 20, 30)];
+    HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(10, (back.h_height - 30)/2, back.h_width - 20, 30)];
     textField.font = [UIFont systemFontOfSize:16];
     textField.text = @"Im a input view allway in bottom";
     textField.layer.cornerRadius = 4;

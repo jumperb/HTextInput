@@ -27,7 +27,6 @@
 		009AE7FD1B26EA3700EC9F0B /* TextViewTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = 009AE7FC1B26EA3700EC9F0B /* TextViewTest1.m */; };
 		00BEE9091B5CC70300195AE7 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00BEE9081B5CC70300195AE7 /* bg.jpg */; };
 		3A8BD5775EE00C3E5A91DC35 /* libPods-HTextInput.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C8FEBB069ED1E61DEAA610 /* libPods-HTextInput.a */; };
-		D0823C2C25249174A98274D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B68D674755377A663DAFF9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0823C2C25249174A98274D9 /* libPods.a in Frameworks */,
 				3A8BD5775EE00C3E5A91DC35 /* libPods-HTextInput.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FA9A9945F7266988B8B0CA6C /* [CP] Embed Pods Frameworks */ = {

@@ -73,7 +73,7 @@
             if (!_orignalFocusPositionY)
             {
                 //conpute the postion of focusView on Window
-                float maxy = _focusView.height;
+                float maxy = _focusView.h_height;
                 if ([_focusView isKindOfClass:[UIScrollView class]])
                 {
                     maxy += [(UIScrollView *)_focusView contentOffset].y;
@@ -81,7 +81,7 @@
                 CGPoint p = [_focusView convertPoint:CGPointMake(0, maxy) toView:window];
                 _orignalFocusPositionY = [NSNumber numberWithFloat:p.y];
             }
-            animationDistance = _orignalFocusPositionY.floatValue - (window.height - keyboardHeight);
+            animationDistance = _orignalFocusPositionY.floatValue - (window.h_height - keyboardHeight);
             if (keyboardHeight > 0 && _adjustDistanceCallback)
             {
                 animationDistance = _adjustDistanceCallback(animationDistance);
