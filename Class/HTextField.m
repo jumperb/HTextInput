@@ -85,12 +85,12 @@
 
 - (CGRect)textRectForBounds:(CGRect)bounds
 {
-    return UIEdgeInsetsInsetRect(bounds, _insect);
+    return UIEdgeInsetsInsetRect([super textRectForBounds:bounds], _insect);
 }
 
 - (CGRect)editingRectForBounds:(CGRect)bounds
 {
-    return UIEdgeInsetsInsetRect(bounds, _insect);
+    return UIEdgeInsetsInsetRect([super textRectForBounds:bounds], _insect);
 }
 - (void)setInsect:(UIEdgeInsets)insect
 {
