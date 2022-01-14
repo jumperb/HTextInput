@@ -23,8 +23,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = 'Class/**/*.{h,m}'
   
-  s.dependency 'Hodor'
-  
   s.requires_arc = true
   
   s.ios.deployment_target = '7.0'
