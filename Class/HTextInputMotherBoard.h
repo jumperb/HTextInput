@@ -21,12 +21,11 @@
 //the real responder to get the keyboard focuse ，usually it is UITextField or UITextView
 @property (nonatomic, strong) UIResponder<HTextInputRecver> *targetResponder;
 //called when show animation finish, return the inputAccessoryView
-@property (nonatomic, strong) callback didShow;
-//消失回调data返回nextResponder
-//called when dismiss animation finish, retuen the nextResponder
-@property (nonatomic, strong) callback willDismiss;
+@property (nonatomic, strong) void (^didShow)(id sender, id data);
+//called when dismiss animation finish, data is the nextResponder
+@property (nonatomic, strong) void (^willDismiss)(id sender, id data);
 //called when resign responder
-@property (nonatomic, strong) callback didResignResponder;
+@property (nonatomic, strong) void (^didResignResponder)(id sender, id data);
 //animations
 @property (nonatomic, strong) NSArray *animations;
 

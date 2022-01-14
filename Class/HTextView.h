@@ -23,5 +23,5 @@
 
 @property (nonatomic, strong) HTAAdjustDistanceBlock adjustDistanceCallback;
 @property (nonatomic) BOOL enableReturn;
-@property (nonatomic, strong) callback returnPressed;
+@property (nonatomic, strong) void (^returnPressed)(id sender, id data);
 @end

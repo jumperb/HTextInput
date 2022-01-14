@@ -1,13 +1,12 @@
 //
 //  HTextAnimationContentInsect.m
-//  Baby360
+//  Hodor
 //
 //  Created by zhangchutian on 15/6/5.
 //  Copyright (c) 2015年 zhangchutian. All rights reserved.
 //
 
 #import "HTextAnimationContentInsect.h"
-#import <Hodor/UIView+ext.h>
 
 @implementation HTextAnimationContentInsect
 
@@ -35,7 +34,7 @@
     if (![self.animationView isKindOfClass:[UIScrollView class]]) return;
 
     UIEdgeInsets newEdge = [(NSValue *)self.orignalAnimationViewProperty UIEdgeInsetsValue];
-    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - ((UIScrollView *)self.animationView).h_ymax);
+    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - (self.animationView.frame.origin.y + self.animationView.frame.size.height));
     [(UIScrollView *)self.animationView setContentInset:newEdge];
 }
 - (void)recoverAnimationStates

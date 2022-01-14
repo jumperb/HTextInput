@@ -1,19 +1,18 @@
 //
 //  HTextAnimationPosition.m
-//  Baby360
+//  Hodor
 //
 //  Created by zhangchutian on 15/6/5.
 //  Copyright (c) 2015年 zhangchutian. All rights reserved.
 //
 
 #import "HTextAnimationPosition.h"
-#import <Hodor/UIView+ext.h>
 
 @implementation HTextAnimationPosition
 - (void)recordAnimationStates
 {
     self.orignalAnimationViewProperty = [NSValue valueWithCGRect:self.animationView.frame];
-    self.orignalAnimationViewProperty2 = @(self.animationView.h_ymax);
+    self.orignalAnimationViewProperty2 = @(self.animationView.frame.origin.y + self.animationView.frame.size.height);
 }
 - (void)setAnimationEndStatesWithDistance:(CGFloat)distance
 {

@@ -1,6 +1,6 @@
 //
 //  HTextAnimation.h
-//  Baby360
+//  Hodor
 //
 //  Created by zhangchutian on 15/6/5.
 //  Copyright (c) 2015年 zhangchutian. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "HTextInputProtocals.h"
-#import <Hodor/HCommonBlock.h>
 
 typedef float (^HTAAdjustDistanceBlock)(float distance);
 
@@ -25,13 +24,13 @@ typedef float (^HTAAdjustDistanceBlock)(float distance);
 //input object
 @property (nonatomic, weak) UIResponder<HTextInputRecver> *inputView;
 //called when keyboard did show
-@property (nonatomic, strong) simple_callback keyboardDidShow;
+@property (nonatomic, strong) void (^keyboardDidShow)(id sender);
 //called when keyboard did dismiss
-@property (nonatomic, strong) simple_callback keyboardDidDismiss;
+@property (nonatomic, strong) void (^keyboardDidDismiss)(id sender);
 //called when keyboard will change, include show, dismiss, frame change, return the keyboard height is block
-@property (nonatomic, strong) simple_callback animationWillBegin;
+@property (nonatomic, strong) void (^animationWillBegin)(id sender);
 //called when keyboard did change, include show, dismiss, frame change, return the keyboard height is block
-@property (nonatomic, strong) simple_callback animationDidEnd;
+@property (nonatomic, strong) void (^animationDidEnd)(id sender);
 //you can adjust the animation distance in this callback
 @property (nonatomic, strong) HTAAdjustDistanceBlock adjustDistanceCallback;
 //indecate the keyboard dismiss animation finish

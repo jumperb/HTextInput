@@ -1,13 +1,12 @@
 //
 //  HTextAnimationBottom.m
-//  Baby360
+//  Hodor
 //
 //  Created by zhangchutian on 15/6/5.
 //  Copyright (c) 2015年 zhangchutian. All rights reserved.
 //
 
 #import "HTextAnimationBottom.h"
-#import <Hodor/UIView+ext.h>
 
 @implementation HTextAnimationBottom
 
@@ -36,7 +35,7 @@
     UIScrollView *scrollView = (UIScrollView *)self.animationView;
 
     UIEdgeInsets newEdge = [(NSValue *)self.orignalAnimationViewProperty UIEdgeInsetsValue];
-    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - scrollView.h_ymax);
+    newEdge.bottom = distance - ([UIScreen mainScreen].bounds.size.height - (scrollView.frame.origin.y + scrollView.frame.size.height));
     [(UIScrollView *)self.animationView setContentInset:newEdge];
     [self scrollToBottom:scrollView edge:newEdge];
 }

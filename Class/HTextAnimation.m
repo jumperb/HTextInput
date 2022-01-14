@@ -1,13 +1,12 @@
 //
 //  HTextAnimation.m
-//  Baby360
+//  Hodor
 //
 //  Created by zhangchutian on 15/6/5.
 //  Copyright (c) 2015年 zhangchutian. All rights reserved.
 //
 
 #import "HTextAnimation.h"
-#import <Hodor/UIView+ext.h>
 
 @interface HTextAnimation ()
 @property (nonatomic) BOOL didAddObserver;
@@ -73,7 +72,7 @@
             if (!_orignalFocusPositionY)
             {
                 //conpute the postion of focusView on Window
-                float maxy = _focusView.h_height;
+                float maxy = _focusView.frame.size.height;
                 if ([_focusView isKindOfClass:[UIScrollView class]])
                 {
                     maxy += [(UIScrollView *)_focusView contentOffset].y;
@@ -81,7 +80,7 @@
                 CGPoint p = [_focusView convertPoint:CGPointMake(0, maxy) toView:window];
                 _orignalFocusPositionY = [NSNumber numberWithFloat:p.y];
             }
-            animationDistance = _orignalFocusPositionY.floatValue - (window.h_height - keyboardHeight);
+            animationDistance = _orignalFocusPositionY.floatValue - (window.frame.size.height - keyboardHeight);
             if (keyboardHeight > 0 && _adjustDistanceCallback)
             {
                 animationDistance = _adjustDistanceCallback(animationDistance);
