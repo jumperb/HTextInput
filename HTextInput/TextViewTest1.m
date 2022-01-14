@@ -7,8 +7,7 @@
 //
 
 #import "TextViewTest1.h"
-#import "HTextView.h"
-#import "HCommon.h"
+#import "HTextInput.h"
 
 @interface TextViewTest1 ()
 @property (nonatomic) UITextView *textView;
@@ -26,15 +25,15 @@
 - (void)loadView
 {
     [super loadView];
-    UIImageView *bg = [[UIImageView alloc] initWithImage:img(@"bg.jpg")];
+    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
     bg.frame = self.view.bounds;
-    ALWAYS_FULL(bg);
+    bg.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     bg.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:bg];
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStylePlain target:self action:@selector(hideKeyboard)];
     self.navigationItem.rightBarButtonItem = rightBtn;
-    HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(0, 64, self.view.h_width, self.view.h_height - 64)];
-    ALWAYS_FULL(textView);
+    HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;;
     _textView = textView;
     _textView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     textView.font = [UIFont systemFontOfSize:18];

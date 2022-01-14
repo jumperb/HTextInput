@@ -7,18 +7,10 @@
 //
 
 #import "MenuVC.h"
-#import "HTextInputMotherBoard.h"
-#import "HTextAnimationContentInsect.h"
-#import "HTextAnimationContentOffset.h"
-#import "HTextAnimationPosition.h"
-#import "HTextAnimationFrame.h"
-#import "HTextAnimationBottom.h"
-#import "HTextField.h"
 #import "TextFieldTest1.h"
 #import "TextFieldTest2.h"
 #import "TextViewTest1.h"
-#import "HTextView.h"
-#import "HCommon.h"
+#import "HTextInput.h"
 
 @interface MenuVC () <UITextViewDelegate>
 
@@ -32,9 +24,9 @@
         self.title = @"MENU";
         __weak typeof(self) weakSelf = self;
         [self addMenu:@"MotherBoard" subTitle:@"auto creaded input view" callback:^(id sender, NSIndexPath *indexPath) {
-            UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, weakSelf.view.h_width, 100)];
-            bg.backgroundColor = [UIColor random];
-            HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(10, 10, self.view.h_width - 20, 100 - 20)];
+            UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, weakSelf.view.frame.size.width, 100)];
+            bg.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1];
+            HTextView *textView = [[HTextView alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, 100 - 20)];
             textView.layer.cornerRadius = 6;
             textView.clipsToBounds = YES;
             [bg addSubview:textView];
@@ -155,10 +147,10 @@
 }
 - (UIView *)bottomInputBar
 {
-    UIToolbar *back = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.h_height - 50, self.view.h_width, 50)];
+    UIToolbar *back = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
     back.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-    HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(10, (back.h_height - 30)/2, back.h_width - 20, 30)];
+    HTextField *textField = [[HTextField alloc] initWithFrame:CGRectMake(10, (back.frame.size.height - 30)/2, back.frame.size.width - 20, 30)];
     textField.font = [UIFont systemFontOfSize:16];
     textField.text = @"Im a input view allway in bottom";
     textField.layer.cornerRadius = 4;
@@ -181,9 +173,9 @@
 }
 - (void)viewDidLoad
 {
-    UIImageView *bg = [[UIImageView alloc] initWithImage:img(@"bg.jpg")];
+    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
     bg.frame = self.view.bounds;
-    ALWAYS_FULL(bg);
+    bg.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     bg.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:bg];
     [super viewDidLoad];

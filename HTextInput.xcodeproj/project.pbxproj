@@ -70,6 +70,7 @@
 		009AE7FC1B26EA3700EC9F0B /* TextViewTest1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTest1.m; sourceTree = "<group>"; };
 		00BEE9081B5CC70300195AE7 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		07B68D674755377A663DAFF9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		15DDE5722791185C00E1AF5B /* HTextInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTextInput.h; sourceTree = "<group>"; };
 		1D0275DDE6F0B60420C77FE1 /* Pods-HTextInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTextInput.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput.debug.xcconfig"; sourceTree = "<group>"; };
 		4B61DEBE5D8DA5D3B74B9EA9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C8FEBB069ED1E61DEAA610 /* libPods-HTextInput.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTextInput.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +115,7 @@
 				0044EFF41C7CBF8C009C482F /* HTextSupport.m */,
 				0044EFF51C7CBF8C009C482F /* HTextView.h */,
 				0044EFF61C7CBF8C009C482F /* HTextView.m */,
+				15DDE5722791185C00E1AF5B /* HTextInput.h */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -141,6 +143,7 @@
 		007A527A1B2541FA004C5E36 /* HTextInput */ = {
 			isa = PBXGroup;
 			children = (
+				007A527B1B2541FA004C5E36 /* Supporting Files */,
 				00BEE9081B5CC70300195AE7 /* bg.jpg */,
 				007A527F1B2541FA004C5E36 /* AppDelegate.h */,
 				007A52801B2541FA004C5E36 /* AppDelegate.m */,
@@ -149,7 +152,6 @@
 				009AE7F21B267C5700EC9F0B /* TextFieldTest1.h */,
 				009AE7F31B267C5700EC9F0B /* TextFieldTest1.m */,
 				007A52881B2541FA004C5E36 /* Images.xcassets */,
-				007A527B1B2541FA004C5E36 /* Supporting Files */,
 				009AE7F51B2689F100EC9F0B /* TextFieldTest2.h */,
 				009AE7F61B2689F100EC9F0B /* TextFieldTest2.m */,
 				009AE7FB1B26EA3700EC9F0B /* TextViewTest1.h */,
@@ -215,8 +217,6 @@
 				007A52741B2541FA004C5E36 /* Sources */,
 				007A52751B2541FA004C5E36 /* Frameworks */,
 				007A52761B2541FA004C5E36 /* Resources */,
-				354DFB944B400AE208F3A1BD /* [CP] Copy Pods Resources */,
-				FA9A9945F7266988B8B0CA6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +246,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -272,49 +273,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		354DFB944B400AE208F3A1BD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6B5A617BE57F2DBFADF95D0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTextInput-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FA9A9945F7266988B8B0CA6C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTextInput/Pods-HTextInput-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
