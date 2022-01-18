@@ -187,7 +187,7 @@
 {
     if (_isAnimating) return;
     //if this delegate is trigered by show or dismiss, ignore
-    if (![_inputView isFirstResponder]) return;
+//    if (![_inputView isFirstResponder]) return;
     CGFloat animatedDuration = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
     NSInteger animationCurve = [noti.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     animationCurve = (animationCurve << 16);
