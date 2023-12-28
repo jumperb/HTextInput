@@ -20,7 +20,6 @@
 {
     self = [super init];
     if (self) {
-        self.automaticallyAdjustsScrollViewInsets  = NO;
         self.title = @"MENU";
         __weak typeof(self) weakSelf = self;
         [self addMenu:@"MotherBoard" subTitle:@"auto creaded input view" callback:^(id sender, NSIndexPath *indexPath) {
