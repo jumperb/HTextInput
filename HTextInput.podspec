@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "HTextInput"
-  s.version = "1.2.5"
+  s.version = "1.2.6"
   s.summary = "A short description of HTextInput."
 
   s.description = <<-DESC
