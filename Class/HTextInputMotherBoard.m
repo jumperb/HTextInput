@@ -18,14 +18,14 @@
 
 + (HTextInputMotherBoard *)view
 {
-    UIView *window = [UIApplication sharedApplication].windows[0];
+    UIView *window = [UIApplication sharedApplication].keyWindow;
     HTextInputMotherBoard *superView = [[HTextInputMotherBoard alloc] initWithFrame:window.bounds];
     [window addSubview:superView];
     return superView;
 }
 + (HTextInputMotherBoard *)currentMotherBoard
 {
-    UIView *window = [UIApplication sharedApplication].windows[0];
+    UIView *window = [UIApplication sharedApplication].keyWindow;
     for (UIView *view in window.subviews)
     {
         if ([view isKindOfClass:[HTextInputMotherBoard class]])
